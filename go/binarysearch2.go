@@ -52,7 +52,7 @@ func BinarySearch4(nums []int, value int) int {
 	start := 0
 	end := len(nums) - 1
 	for start <= end {
-		mid := (start + end) >> 1
+		mid := start + ((end-start) >> 1)
 		if nums[mid] < value {
 			start = mid + 1
 		} else {
@@ -73,7 +73,7 @@ func BinarySearch5(nums []int, value int) int {
 	start := 0
 	end := len(nums) - 1
 	for start <= end {
-		mid := (start + end) >> 1
+		mid := start + ((end-start) >> 1)
 		if nums[mid] > value {
 			end = mid - 1
 		} else {
